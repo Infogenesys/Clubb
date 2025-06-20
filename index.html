@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clubb- Book your funtime!</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="login.js"></script>
+</head>
+<body>
+    <header>
+        <h1> Welcome to Clubb!
+            <img src="Hill View logo.jpg" alt="Clubb Logo" id="logo">
+        </h1>
+    </header>
+    <section id="login-section">
+        <div id="login-container">
+            <label for="login-title">Hill View Co-Op Housing Society</label>
+            <h2 id="login-title">Login</h2>
+            <form id="loginForm">
+                <label for="login-email">Please enter your email:</label>
+                <input type="email" id="login-email" name="login-email" required>
+                <label for="login-password">Please enter your password:</label>
+                <input type="password" id="login-password" name="login-password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p>First time here? <a href="#" id="show-register">Register now!</a></p>
+        </div>
+        <div id="register-container" style="display:none;">
+            <h2>Let's get you registered!</h2>
+            <form id="registerForm">
+                <label for="register-email">Please enter your email:</label>
+                <input type="email" id="register-email" name="register-email" required>
+                <label for="register-dob">Please enter your date of birth:</label>
+                <input type="date" id="register-dob" name="register-dob" required>
+                <label for="register-password">Please enter your password:</label>
+                <input type="password" id="register-password" name="register-password" required>
+                <button type="submit">Amazing! You're all set!</button>
+            </form>
+            <p>Already have an account? <a href="#" id="show-login">Let's get you back to login</a></p>
+        </div>
+    </section>
+    <main id="main-content" style="display:none;">
+        <button id="logoutBtn" style="float:right; margin-bottom:1rem;">Logout</button>
+        <section class="booking-form">
+            <h2>Book a slot!
+                <label for="bookingForm">Each booking duration is 2 hours.</label>
+                <label for="bookingForm">Fill out the form below to book your slot:</label>
+            </h2>
+            <form id="bookingForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+                <label for="time">Time:</label>
+                <input type="time" id="time" name="time" required>
+                <button type="submit">Book Now</button>
+            </form>
+        </section>
+        <section class="bookings-list">
+            <h2>Existing Bookings</h2>
+            <ul id="bookings"></ul>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
